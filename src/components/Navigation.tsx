@@ -29,7 +29,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 p-2">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 p-2 shadow-card">
               <img 
                 src="/lovable-uploads/75d01d4a-a1d5-4392-9fc3-598db7a50279.png" 
                 alt="Hagerstone Logo" 
