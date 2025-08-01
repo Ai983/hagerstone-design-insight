@@ -54,10 +54,10 @@ const AIAssistant = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer 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",
+          "Authorization": "Bearer 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",
         },
         body: JSON.stringify({
-          model: "gpt-4",
+          model: "gpt-4o-mini",
           messages: [
             {
               role: "system",
