@@ -44,9 +44,9 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Office",
-      value: "Delhi NCR, India",
-      href: "#",
+      title: "Office Address",
+      value: "7th Floor, Max Hospital Building, H.B Twin Tower, New Delhi, Delhi 110034, India",
+      href: "https://www.google.com/maps/place/Hagerstone+International+-+Best+Interior+Design+%26+Build+Company/@28.6931743,77.1518589,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce36350678413:0xe0a4252396dc1099!8m2!3d28.6931743!4d77.1518589!16s%2Fg%2F11j595gxhr!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDcyOS4wIKXMDSoASAFQAw%3D%3D",
       description: "Visit our design studio"
     },
     {
@@ -253,13 +253,20 @@ const Contact = () => {
               {/* Map Placeholder */}
               <Card className="bg-gradient-card border-0 shadow-luxury">
                 <CardContent className="p-0">
-                  <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                      <p className="text-muted-foreground">Interactive map coming soon</p>
-                      <p className="text-sm text-muted-foreground mt-1">Delhi NCR, India</p>
-                    </div>
-                  </div>
+                   <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
+                     <div className="text-center">
+                       <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                       <p className="text-muted-foreground">Interactive map coming soon</p>
+                       <a 
+                         href="https://www.google.com/maps/place/Hagerstone+International+-+Best+Interior+Design+%26+Build+Company/@28.6931743,77.1518589,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce36350678413:0xe0a4252396dc1099!8m2!3d28.6931743!4d77.1518589!16s%2Fg%2F11j595gxhr!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="text-sm text-primary hover:text-accent transition-colors duration-300 mt-1 block"
+                       >
+                         7th Floor, Max Hospital Building, H.B Twin Tower, New Delhi, Delhi 110034, India
+                       </a>
+                     </div>
+                   </div>
                 </CardContent>
               </Card>
 
