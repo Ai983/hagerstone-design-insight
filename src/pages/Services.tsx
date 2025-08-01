@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ServiceModal from "@/components/ServiceModal";
 import { 
   Palette, 
   Building, 
@@ -12,6 +14,14 @@ import {
 } from "lucide-react";
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleServiceClick = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
   const services = [
     {
       icon: Palette,
@@ -174,6 +184,7 @@ const Services = () => {
                         <Button 
                           className="mt-6 group/btn"
                           variant="outline"
+                          onClick={() => handleServiceClick(service)}
                         >
                           Learn More
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -285,6 +296,15 @@ const Services = () => {
           </Button>
         </div>
       </section>
+
+      {/* Service Modal */}
+      {selectedService && (
+        <ServiceModal
+          service={selectedService}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };
