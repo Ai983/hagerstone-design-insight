@@ -86,7 +86,7 @@ const Index = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-luxury hover:scale-105 transition-all duration-300"
+                  className="border-black text-black bg-white hover:bg-black hover:text-white shadow-luxury hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/contact">Get Consultation</Link>
                 </Button>

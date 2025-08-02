@@ -114,7 +114,7 @@ const AIAssistant = () => {
     return (
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-gradient-hero shadow-luxury hover:shadow-hover hover:scale-110 transition-all duration-300 animate-float z-40"
+        className="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-gradient-hero shadow-luxury hover:shadow-hover hover:scale-110 transition-all duration-300 animate-float z-40"
         size="lg"
       >
         <MessageCircle className="h-6 w-6 text-primary-foreground" />
@@ -123,7 +123,7 @@ const AIAssistant = () => {
   }
 
   return (
-    <Card className={`fixed bottom-6 right-6 w-96 bg-background shadow-luxury border-2 border-primary/20 z-40 animate-scale-in ${
+    <Card className={`fixed bottom-8 right-8 w-96 bg-background shadow-luxury border-2 border-primary/20 z-40 animate-scale-in ${
       isMinimized ? "h-16" : "h-[500px]"
     } transition-all duration-300`}>
       {/* Header */}
