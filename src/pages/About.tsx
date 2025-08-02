@@ -33,17 +33,17 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <Card className="bg-gradient-card border-0 shadow-luxury p-6">
             <CardContent>
-              <h3 className="text-2xl font-bold text-primary mb-2">Bhaskar Tyagi</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">Dhruv Agarwal</h3>
               <p className="text-foreground mb-4">
-                Director of Hagerstone International Pvt. Ltd., with over 16+ years of extensive experience in the hospitality industry, specializing in interior design. Bhaskar delivers luxurious, functional, and guest-centric spaces that enhance the hotel experience.
+                Founder & Managing Director, Civil Engineer from Delhi College of Engineering. With over 10 million sq ft of projects delivered across UAE, Myanmar, and India, Dhruv established Hagerstone to provide seamless, end-to-end design and build services blending creativity with functionality.
               </p>
             </CardContent>
           </Card>
           <Card className="bg-gradient-card border-0 shadow-luxury p-6">
             <CardContent>
-              <h3 className="text-2xl font-bold text-primary mb-2">Dhruv Agarwal</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">Bhaskar Tyagi</h3>
               <p className="text-foreground mb-4">
-                Founder & Managing Director, Civil Engineer from Delhi College of Engineering. With over 10 million sq ft of projects delivered across UAE, Myanmar, and India, Dhruv established Hagerstone to provide seamless, end-to-end design and build services blending creativity with functionality.
+                Director of Hagerstone International Pvt. Ltd., with over 16+ years of extensive experience in the hospitality industry, specializing in interior design. Bhaskar delivers luxurious, functional, and guest-centric spaces that enhance the hotel experience.
               </p>
             </CardContent>
           </Card>
