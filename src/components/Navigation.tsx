@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,12 +44,12 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-muted hover:text-primary hover:scale-105 ${
+                className={`cursor-hover px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-muted hover:text-primary hover:scale-105 ${
                   isActive(item.href)
                     ? "bg-primary text-primary-foreground shadow-lg"
                     : "text-foreground"
@@ -57,6 +58,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}

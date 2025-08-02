@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import AIAssistant from "./components/AIAssistant";
+import CustomCursor from "./components/CustomCursor";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CustomCursor />
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />

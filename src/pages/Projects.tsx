@@ -19,63 +19,83 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Corporate Headquarters - Tech Solutions",
+      title: "Modern Meeting Room - Engineered Success",
       category: "Office",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-      location: "Mumbai, Maharashtra",
+      image: "/lovable-uploads/4ebed2b0-411b-4898-bc5c-9d4e3278dd67.png",
+      location: "Delhi, NCR",
       year: "2024",
-      description: "Modern workspace design with collaborative areas",
-      tags: ["Modern", "Collaborative", "Tech-forward"]
+      description: "Contemporary meeting space with glass walls and professional branding",
+      tags: ["Modern", "Professional", "Glass Design"]
     },
     {
       id: 2,
-      title: "Luxury Villa - Residential Complex",
-      category: "Residential",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
-      location: "Delhi, NCR",
+      title: "Executive Office Suite - Premium Design",
+      category: "Office",
+      image: "/lovable-uploads/7a2ed00f-2c02-4bda-95e0-bd4c1cdc6b97.png",
+      location: "Mumbai, Maharashtra",
       year: "2024",
-      description: "Elegant residential design with premium finishes",
-      tags: ["Luxury", "Elegant", "Premium"]
+      description: "Sophisticated executive workspace with geometric patterns and premium finishes",
+      tags: ["Executive", "Geometric", "Premium"]
     },
     {
       id: 3,
-      title: "Boutique Hotel - Hospitality Design",
-      category: "Hotels",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
-      location: "Goa",
-      year: "2023",
-      description: "Contemporary hotel design with coastal influences",
-      tags: ["Contemporary", "Coastal", "Hospitality"]
+      title: "Conference Room - Teamwork Innovation",
+      category: "Office",
+      image: "/lovable-uploads/bda3eff8-a3fe-4a0a-ba04-4139abe81acf.png",
+      location: "Bangalore, Karnataka",
+      year: "2024",
+      description: "Creative conference space with motivational wall graphics and modern furniture",
+      tags: ["Creative", "Motivational", "Modern"]
     },
     {
       id: 4,
-      title: "Manufacturing Facility - Industrial Design",
-      category: "Factories",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
-      location: "Pune, Maharashtra",
-      year: "2023",
-      description: "Efficient factory layout with safety-first approach",
-      tags: ["Industrial", "Efficient", "Safety-focused"]
+      title: "Strategic Meeting Room - Success Vision",
+      category: "Office",
+      image: "/lovable-uploads/58bd93a5-282f-40b0-b43f-c1de39ce3a8d.png",
+      location: "Gurgaon, Haryana",
+      year: "2024",
+      description: "Professional meeting space with inspirational messaging and contemporary design",
+      tags: ["Strategic", "Inspirational", "Contemporary"]
     },
     {
       id: 5,
-      title: "Retail Showroom - Fashion Brand",
+      title: "Modern Cafeteria - Social Hub",
       category: "Commercial",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-      location: "Bangalore, Karnataka",
+      image: "/lovable-uploads/5b9a1bce-a0cc-431c-bd20-d7cb7eed9a8b.png",
+      location: "Hyderabad, Telangana",
       year: "2024",
-      description: "Trendy retail space with dynamic display areas",
-      tags: ["Retail", "Trendy", "Dynamic"]
+      description: "Vibrant cafeteria space with pendant lighting and comfortable seating areas",
+      tags: ["Social", "Vibrant", "Comfortable"]
     },
     {
       id: 6,
-      title: "Executive Office Suite",
+      title: "Premium Dining Area - Corporate Cafeteria",
+      category: "Commercial",
+      image: "/lovable-uploads/cf696935-f2de-4400-80fd-6cb9d308d8a4.png",
+      location: "Pune, Maharashtra",
+      year: "2024",
+      description: "Upscale dining environment with wooden accents and modern amenities",
+      tags: ["Premium", "Dining", "Wooden Accents"]
+    },
+    {
+      id: 7,
+      title: "Director's Cabin - Executive Leadership",
       category: "Office",
-      image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800&h=600&fit=crop",
+      image: "/lovable-uploads/e6a98111-9f27-46e3-a696-1f8e61939165.png",
       location: "Chennai, Tamil Nadu",
-      year: "2023",
-      description: "Sophisticated executive workspace with premium amenities",
-      tags: ["Executive", "Sophisticated", "Premium"]
+      year: "2024",
+      description: "Elegant director's office with panoramic views and sophisticated furnishing",
+      tags: ["Executive", "Elegant", "Panoramic"]
+    },
+    {
+      id: 8,
+      title: "Modern Office Space - Contemporary Design",
+      category: "Office",
+      image: "/lovable-uploads/41102b7b-5060-4a71-a3c2-e16e3600d3a4.png",
+      location: "Noida, Uttar Pradesh",
+      year: "2024",
+      description: "Open-plan office with geometric wall features and modern workstations",
+      tags: ["Open-plan", "Geometric", "Workstations"]
     }
   ];
 
@@ -109,7 +129,7 @@ const Projects = () => {
                   key={category.name}
                   variant={activeCategory === category.name ? "default" : "outline"}
                   onClick={() => setActiveCategory(category.name)}
-                  className={`flex items-center space-x-2 px-6 py-3 transition-all duration-300 hover:scale-105 animate-scale-in ${
+                  className={`cursor-hover flex items-center space-x-2 px-6 py-3 transition-all duration-300 ease-in-out hover:scale-105 animate-scale-in ${
                     activeCategory === category.name 
                       ? "bg-primary text-primary-foreground shadow-luxury" 
                       : "hover:bg-muted"
@@ -132,7 +152,7 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.id}
-                className="group bg-gradient-card border-0 shadow-card hover:shadow-luxury transition-all duration-500 hover:scale-105 animate-scale-in overflow-hidden"
+                className="cursor-hover group bg-gradient-card border-0 shadow-card hover:shadow-luxury transition-all duration-500 ease-in-out hover:scale-105 animate-scale-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -205,7 +225,7 @@ const Projects = () => {
           <Button 
             size="lg"
             variant="secondary"
-            className="bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300 animate-scale-in"
+            className="cursor-hover bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300 ease-in-out animate-scale-in"
           >
             Get Started Today
           </Button>

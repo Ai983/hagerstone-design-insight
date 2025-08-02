@@ -143,11 +143,14 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-up': 'slide-up 0.8s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out',
+				'fade-in': 'fade-in 0.6s ease-in-out',
+				'slide-up': 'slide-up 0.8s ease-in-out',
+				'scale-in': 'scale-in 0.4s ease-in-out',
 				'float': 'float 3s ease-in-out infinite',
 				'slide': 'slide 30s linear infinite'
+			},
+			transitionTimingFunction: {
+				'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',

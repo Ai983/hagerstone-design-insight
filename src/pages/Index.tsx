@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import VideoBackground from "@/components/VideoBackground";
 import { 
   Building2, 
   Users, 
@@ -56,51 +57,52 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-primary-foreground py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-                Hagerstone
-                <span className="block text-3xl md:text-4xl font-light text-primary-foreground/90">
-                  International Pvt. Ltd.
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-slide-up">
-                Transforming spaces into extraordinary experiences with 16+ years of design excellence
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-scale-in">
-                <Button 
-                  asChild
-                  size="lg"
-                  className="bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300"
-                >
-                  <Link to="/projects">
-                    View Our Work
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button 
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-black text-black bg-white hover:bg-black hover:text-white shadow-luxury hover:scale-105 transition-all duration-300"
-                >
-                  <Link to="/contact">Get Consultation</Link>
-                </Button>
+      {/* Hero Section with Video Background */}
+      <section className="relative text-white py-32 overflow-hidden min-h-screen flex items-center">
+        <VideoBackground>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-center lg:text-left">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                  Hagerstone
+                  <span className="block text-3xl md:text-4xl font-light text-white/90">
+                    International Pvt. Ltd.
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl text-white/90 mb-8 animate-slide-up">
+                  Transforming spaces into extraordinary experiences with 16+ years of design excellence
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 animate-scale-in">
+                  <Button 
+                    asChild
+                    size="lg"
+                    className="cursor-hover bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300"
+                  >
+                    <Link to="/projects">
+                      View Our Work
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button 
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="cursor-hover border-white text-black bg-white hover:bg-primary hover:text-white shadow-luxury hover:scale-105 transition-all duration-300"
+                  >
+                    <Link to="/contact">Get Consultation</Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="animate-float">
+                <img
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop"
+                  alt="Modern interior design"
+                  className="rounded-2xl shadow-luxury w-full max-w-md mx-auto lg:max-w-none"
+                />
               </div>
             </div>
-            <div className="animate-float">
-              <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop"
-                alt="Modern interior design"
-                className="rounded-2xl shadow-luxury w-full max-w-md mx-auto lg:max-w-none"
-              />
-            </div>
           </div>
-        </div>
+        </VideoBackground>
       </section>
 
       {/* Stats Section */}
