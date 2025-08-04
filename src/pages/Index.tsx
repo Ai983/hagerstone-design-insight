@@ -2,25 +2,25 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import VideoBackground from "@/components/VideoBackground";
-import { 
-  Building2, 
-  Users, 
-  Award, 
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import {
+  Building2,
+  Users,
+  Award,
   Star,
   ArrowRight,
   Palette,
   Building,
   Zap,
-  CheckCircle
+  CheckCircle,
+  Briefcase,
+  Ruler,
+  Projector,
+  Globe
 } from "lucide-react";
 
 const Index = () => {
-  const stats = [
-    { icon: Building2, label: "Sq Ft Completed", value: "7M+" },
-    { icon: Users, label: "Happy Clients", value: "500+" },
-    { icon: Award, label: "Years Experience", value: "16+" },
-    { icon: Star, label: "Projects Delivered", value: "1000+" },
-  ];
 
   const services = [
     {
@@ -106,22 +106,37 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-white dark:bg-muted/20 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+              <span className="text-blue-600 dark:text-yellow-400">Making an Impact:</span> The Numbers
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[ 
+              { icon: Briefcase, value: 11, suffix: "+ YEARS", label: "Experience of In Industry" },
+              { icon: Ruler, value: 7, suffix: " MILLION+ SQFT", label: "Designed & Delivered" },
+              { icon: Projector, value: 250, suffix: "+ PROJECTS", label: "Combined Projects Delivery By Our Leadership Team" },
+              { icon: Users, value: 350, suffix: "+ MANPOWER", label: "Expert & general workforce across India" },
+              { icon: Building2, value: 15, suffix: "+ CITIES", label: "Across the India" },
+              { icon: Globe, value: 7, suffix: "+ COUNTRIES", label: "For Global Clients" },
+            ].map(({ icon: Icon, value, suffix, label }, index) => {
+              const { ref, inView } = useInView({ triggerOnce: true });
               return (
-                <div 
-                  key={stat.label}
-                  className="text-center group animate-scale-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                <div
+                  key={index}
+                  ref={ref}
+                  className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md text-center transition hover:shadow-xl transform hover:-translate-y-1 duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-8 w-8 text-gold-foreground" />
+                  <div className="flex justify-center mb-4">
+                    <Icon className="h-10 w-10 text-primary dark:text-gold" />
                   </div>
-                  <h3 className="text-3xl font-bold text-primary mb-2">{stat.value}</h3>
-                  <p className="text-muted-foreground">{stat.label}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {inView && <CountUp start={0} end={value} duration={2} suffix={` ${suffix}`} />}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{label}</p>
                 </div>
               );
             })}
@@ -129,6 +144,7 @@ const Index = () => {
         </div>
       </section>
 
+      
       {/* Services Preview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
