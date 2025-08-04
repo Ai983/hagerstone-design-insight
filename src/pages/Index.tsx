@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import VideoBackground from "@/components/VideoBackground";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
+
 import { useInView } from "react-intersection-observer";
 import {
   Building2,
@@ -55,54 +57,98 @@ const Index = () => {
     }
   ];
 
+  const heroText = "Hagerstone".split("");
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with Video Background */}
-      <section className="relative text-white py-32 overflow-hidden min-h-screen flex items-center">
-        <VideoBackground>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-center lg:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-                  Hagerstone
-                  <span className="block text-3xl md:text-4xl font-light text-white/90">
-                    International Pvt. Ltd.
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl text-white/90 mb-8 animate-slide-up">
-                  Transforming spaces into extraordinary experiences with 16+ years of design excellence
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 animate-scale-in">
-                  <Button 
-                    asChild
-                    size="lg"
-                    className="cursor-hover bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300"
-                  >
-                    <Link to="/projects">
-                      View Our Work
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button 
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="cursor-hover border-white text-black bg-white hover:bg-primary hover:text-white shadow-luxury hover:scale-105 transition-all duration-300"
-                  >
-                    <Link to="/contact">Get Consultation</Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="animate-float">
-                <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop"
-                  alt="Modern interior design"
-                  className="rounded-2xl shadow-luxury w-full max-w-md mx-auto lg:max-w-none"
-                />
-              </div>
-            </div>
-          </div>
-        </VideoBackground>
+      <section className="relative text-white min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/Office Interior.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+        {/* Animated Heading */}
+        <div className="relative z-20 text-center px-4">
+          <motion.h1
+            className="text-5xl md:text-7xl font-extrabold text-white mb-4 flex justify-center flex-wrap gap-1"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.08
+                }
+              }
+            }}
+          >
+            {heroText.map((char, i) => (
+              <motion.span
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
+
+          <motion.h2
+            className="text-2xl md:text-4xl text-white/90 font-light mb-6"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
+            International Pvt. Ltd.
+          </motion.h2>
+
+          <motion.p
+            className="text-lg md:text-2xl max-w-2xl mx-auto text-white/90"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4 }}
+          >
+            Transforming spaces into extraordinary experiences with 16+ years of design excellence
+          </motion.p>
+
+          <motion.div
+            className="mt-10 flex justify-center gap-4 flex-wrap"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2 }}
+          >
+            <Button
+              asChild
+              size="lg"
+              className="cursor-hover bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/projects">
+                View Our Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="cursor-hover border-white text-black bg-white hover:bg-primary hover:text-white shadow-luxury hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/contact">Get Consultation</Link>
+            </Button>
+          </motion.div>
+        </div>
       </section>
 
       {/* Stats Section */}
