@@ -63,17 +63,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Unified Navbar */}
       
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="Logo" className="w-10 h-10" />
-            <div className="leading-tight">
-              <div className="text-lg font-bold text-white">Hagerstone</div>
-              <div className="text-sm text-gray-300">International Pvt. Ltd.</div>
-            </div>
-          </div>
-          
-        </div>
-    
+        
 
 
 
