@@ -62,12 +62,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Unified Navbar */}
-      <motion.nav
-        className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-md text-white"
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
+      
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <img src="/logo.png" alt="Logo" className="w-10 h-10" />
