@@ -271,7 +271,7 @@ const Index = () => {
               <Card 
                 key={project.title}
                 className="group bg-gradient-card border-0 shadow-card hover:shadow-luxury transition-all duration-500 hover:scale-105 animate-scale-in overflow-hidden"
-                style={{ animationDelay: ⁠ ${index * 0.1}s ⁠ }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -318,7 +318,7 @@ const Index = () => {
               <Card 
                 key={testimonial.name}
                 className="bg-gradient-card border-0 shadow-luxury animate-scale-in"
-                style={{ animationDelay: ⁠ ${index * 0.1}s ⁠ }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
                   <div className="flex mb-4">
@@ -359,7 +359,7 @@ const Index = () => {
               <div 
                 key={benefit}
                 className="text-center animate-scale-in"
-                style={{ animationDelay: ⁠ ${index * 0.1}s ⁠ }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CheckCircle className="h-12 w-12 text-gold mx-auto mb-4" />
                 <h3 className="text-lg font-semibold">{benefit}</h3>
@@ -392,3 +392,4 @@ const Index = () => {
 };
 
 export default Index;
+
