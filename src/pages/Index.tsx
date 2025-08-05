@@ -76,14 +76,14 @@ const Index = () => {
               <div className="text-sm text-gray-300">International Pvt. Ltd.</div>
             </div>
           </div>
-          <div className="space-x-6 hidden md:flex text-white">
-            <Link to="/" className="hover:text-gold">Home</Link>
-            <Link to="/#about" className="hover:text-gold">About</Link>
-            <Link to="/#projects" className="hover:text-gold">Projects</Link>
-            <Link to="/#services" className="hover:text-gold">Our Services</Link>
-            <Link to="/#ideas" className="hover:text-gold">Ideas</Link>
-            <Link to="/#blog" className="hover:text-gold">Blog</Link>
-            <Link to="/#contact" className="hover:text-gold">Contact Us</Link>
+          <div className="space-x-6 hidden md:flex">
+            <Link to="/" className="hover:underline text-primary">Home</Link>
+            <Link to="/#about" className="hover:underline text-primary">About</Link>
+            <Link to="/#projects" className="hover:underline text-primary">Projects</Link>
+            <Link to="/#services" className="hover:underline text-primary">Our Services</Link>
+            <Link to="/#ideas" className="hover:underline text-primary">Ideas</Link>
+            <Link to="/#blog" className="hover:underline text-primary">Blog</Link>
+            <Link to="/#contact" className="hover:underline text-primary">Contact Us</Link>
           </div>
         </div>
       </motion.nav>
