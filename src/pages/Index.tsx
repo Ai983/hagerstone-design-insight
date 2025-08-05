@@ -73,7 +73,7 @@ const Index = () => {
           </div>
           
         </div>
-      </motion.nav>
+    
 
 
 
