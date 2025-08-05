@@ -2,12 +2,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 to-secondary/5 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-6xl font-bold text-primary mb-6 animate-fade-in">About Hagerstone International</h1>
-          <p className="text-xl text-foreground/80 max-w-4xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl text-foreground/80 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Leading design and build firm specializing in architecture, interiors, construction and factories
           </p>
         </div>
@@ -20,39 +20,44 @@ const About = () => {
             <h2 className="text-5xl font-bold text-primary mb-6 animate-fade-in">Our Story</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-gradient-card p-8 rounded-2xl shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in">
-              <div className="text-4xl font-bold text-primary mb-2">11+</div>
-              <div className="text-lg text-foreground">Years of Excellence</div>
-            </div>
-            <div className="bg-gradient-card p-8 rounded-2xl shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: '0.1s'}}>
-              <div className="text-4xl font-bold text-primary mb-2">7M+</div>
-              <div className="text-lg text-foreground">Sq. Ft. Completed</div>
-            </div>
-            <div className="bg-gradient-card p-8 rounded-2xl shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: '0.2s'}}>
-              <div className="text-4xl font-bold text-primary mb-2">250+</div>
-              <div className="text-lg text-foreground">Projects Delivered</div>
-            </div>
+            {["11+", "7M+", "250+"].map((value, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-card p-8 rounded-2xl shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${idx * 0.1}s` }}
+              >
+                <div className="text-4xl font-bold text-primary mb-2">{value}</div>
+                <div className="text-lg text-foreground">
+                  {idx === 0 ? "Years of Excellence" : idx === 1 ? "Sq. Ft. Completed" : "Projects Delivered"}
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <p className="text-lg text-foreground mb-6 leading-relaxed">
-                Hagerstone International is a leading design and build firm specializing in architecture, interiors, construction and factories. With 11+ years of experience, 7M+ sq. ft. completed, and 250+ projects across 15+ cities, we craft world-class commercial, corporate, and luxury spaces.
+                Hagerstone International is a leading design and build firm specializing in architecture, interiors,
+                construction and factories. With 11+ years of experience, 7M+ sq. ft. completed, and 250+ projects across
+                15+ cities, we craft world-class commercial, corporate, and luxury spaces.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
-                Our 350+ professionals ensure seamless execution, integrating cutting-edge design, sustainability, and innovation. From offices to retail and hospitality, we create functional, inspiring, and future-ready environments.
+                Our 350+ professionals ensure seamless execution, integrating cutting-edge design, sustainability, and
+                innovation. From offices to retail and hospitality, we create functional, inspiring, and future-ready
+                environments.
               </p>
             </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold text-primary mb-4">Our Core Values</h3>
                 <ul className="space-y-3 text-foreground">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"></span>Innovation & Creativity</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"></span>Quality Excellence</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"></span>Client Satisfaction</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"></span>Sustainable Practices</li>
+                  {["Innovation & Creativity", "Quality Excellence", "Client Satisfaction", "Sustainable Practices"].map((val, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>{val}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -62,22 +67,27 @@ const About = () => {
         {/* Vision & Mission */}
         <section className="py-20">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold text-primary mb-6">Our Vision</h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-              <p className="text-lg text-foreground leading-relaxed">
-                Our vision for the next 10 years is to become India's No. 1 technology-enabled design and build firm across all sectors. We aim to be the first preference for clients when it comes to technology-driven design and build projects.
-              </p>
-            </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
-              <h2 className="text-4xl font-bold text-primary mb-6">Our Mission</h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-              <p className="text-lg text-foreground leading-relaxed">
-                Our mission is to empower our team, our people, and the entire Hagerstone International family in such a manner that we create at least 30 millionaires inside the Hagerstone family over the next 10 years. We want Hagerstone International family teams and staff to be stakeholders in the company, to have ESOPs, so that they also grow with the entire company. Our mission is to bring happiness to each of our team members' lives and their families' lives, and this mission drives us to keep on growing and to keep on improving every day.
-              </p>
-            </div>
+            {[
+              {
+                title: "Our Vision",
+                content:
+                  "Our vision for the next 10 years is to become India's No. 1 technology-enabled design and build firm across all sectors. We aim to be the first preference for clients when it comes to technology-driven design and build projects."
+              },
+              {
+                title: "Our Mission",
+                content:
+                  "Our mission is to empower our team, our people, and the entire Hagerstone International family in such a manner that we create at least 30 millionaires inside the Hagerstone family over the next 10 years. We want Hagerstone International family teams and staff to be stakeholders in the company, to have ESOPs, so that they also grow with the entire company. Our mission is to bring happiness to each of our team members' lives and their families' lives, and this mission drives us to keep on growing and to keep on improving every day."
+              }
+            ].map((block, idx) => (
+              <div className="animate-fade-in" key={idx} style={{ animationDelay: `${idx * 0.2}s` }}>
+                <h2 className="text-4xl font-bold text-primary mb-6">{block.title}</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mb-6"></div>
+                <p className="text-lg text-foreground leading-relaxed">{block.content}</p>
+              </div>
+            ))}
           </div>
         </section>
+      </div>
 
         {/* Our Valued Partners */}
         <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl mb-20 overflow-hidden">
