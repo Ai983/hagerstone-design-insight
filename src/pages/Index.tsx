@@ -162,10 +162,14 @@ const Index = () => {
             transition={{ delay: 1.4 }}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
             Transforming spaces into extraordinary experiences with 11+ years of design excellence.
 =======
             Transforming spaces into extraordinary experiences with 11+ years of design excellence
 >>>>>>> aa5837d (changes made in navbar)
+=======
+            Transforming spaces into extraordinary experiences with 11+ years of design excellence.
+>>>>>>> 84be6fd (made changes in expertise)
           </motion.p>
 
           <motion.div
