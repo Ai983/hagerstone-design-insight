@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import ValuedPartners from "@/components/ValuedPartners";
+
 import { Heart, Share2, X, ArrowRight, ChevronDown } from "lucide-react";
 
 const Ideas = () => {
@@ -345,7 +345,7 @@ const Ideas = () => {
       </section>
 
       {/* Valued Partners */}
-      <ValuedPartners />
+      
 
       {/* Inspiration Section */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">

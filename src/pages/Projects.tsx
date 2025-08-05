@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import ValuedPartners from "@/components/ValuedPartners";
+
 import { Building, Home, Hotel, Factory, Store, MapPin, Calendar } from "lucide-react";
 
 const Projects = () => {
@@ -215,7 +215,7 @@ const Projects = () => {
       </section>
 
       {/* Valued Partners */}
-      <ValuedPartners />
+      
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">

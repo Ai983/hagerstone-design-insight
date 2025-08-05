@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ServiceModal from "@/components/ServiceModal";
-import ValuedPartners from "@/components/ValuedPartners";
+
 import { 
   Palette, 
   Building, 
@@ -280,7 +280,7 @@ const Services = () => {
       </section>
 
       {/* Valued Partners */}
-      <ValuedPartners />
+      
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">

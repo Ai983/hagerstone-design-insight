@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import ValuedPartners from "@/components/ValuedPartners";
+
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 const Blog = () => {
@@ -218,7 +218,7 @@ const Blog = () => {
       </section>
 
       {/* Valued Partners */}
-      <ValuedPartners />
+      
 
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">

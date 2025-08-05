@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import VideoBackground from "@/components/VideoBackground";
-import ValuedPartners from "@/components/ValuedPartners";
+
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 
@@ -370,8 +370,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Valued Partners */}
-      <ValuedPartners />
 
       {/* CTA Section */}
       <section className="py-20">

@@ -92,21 +92,38 @@ const About = () => {
         {/* Our Valued Clients */}
         <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl mb-20 overflow-hidden">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Valued Partners</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">Our Valued Clients</h2>
             <p className="text-lg text-foreground/80">Trusted by industry leaders worldwide</p>
           </div>
-          <div className="relative">
-            <div className="flex animate-[slide_30s_linear_infinite] space-x-12 items-center">
+          <div className="relative overflow-hidden">
+            <div className="flex animate-[slide_20s_linear_infinite] space-x-8 items-center">
               {[
-                "TAJ", "UltraTech Cement", "BCG", "Statkraft", "Monin", "APL Logistics",
-                "Singapore Airlines", "AECOM", "Air India", "Lufthansa", "Panasonic",
-                "TAJ", "UltraTech Cement", "BCG", "Statkraft", "Monin", "APL Logistics"
-              ].map((partner, index) => (
+                { name: "Monin", color: "#8B4513", bgColor: "rgba(139, 69, 19, 0.1)" },
+                { name: "APL Logistics", color: "#1E40AF", bgColor: "rgba(30, 64, 175, 0.1)" },
+                { name: "Singapore Airlines", color: "#003087", bgColor: "rgba(0, 48, 135, 0.1)" },
+                { name: "AECOM", color: "#00A651", bgColor: "rgba(0, 166, 81, 0.1)" },
+                { name: "TAJ", color: "#FFD700", bgColor: "rgba(255, 215, 0, 0.1)" },
+                { name: "UltraTech Cement", color: "#FFA500", bgColor: "rgba(255, 165, 0, 0.1)" },
+                { name: "Air India", color: "#DC2626", bgColor: "rgba(220, 38, 38, 0.1)" },
+                { name: "Lufthansa", color: "#1E3A8A", bgColor: "rgba(30, 58, 138, 0.1)" },
+                { name: "Statkraft", color: "#059669", bgColor: "rgba(5, 150, 105, 0.1)" },
+                // Duplicate for continuous scroll
+                { name: "Monin", color: "#8B4513", bgColor: "rgba(139, 69, 19, 0.1)" },
+                { name: "APL Logistics", color: "#1E40AF", bgColor: "rgba(30, 64, 175, 0.1)" },
+                { name: "Singapore Airlines", color: "#003087", bgColor: "rgba(0, 48, 135, 0.1)" },
+                { name: "AECOM", color: "#00A651", bgColor: "rgba(0, 166, 81, 0.1)" }
+              ].map((client, index) => (
                 <div 
                   key={index} 
-                  className="flex-shrink-0 bg-white/80 backdrop-blur-sm px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/10"
+                  className="flex-shrink-0 w-48 h-24 bg-white/90 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 flex items-center justify-center hover:scale-105"
+                  style={{ backgroundColor: client.bgColor }}
                 >
-                  <span className="text-lg font-semibold text-primary whitespace-nowrap">{partner}</span>
+                  <span 
+                    className="text-lg font-bold whitespace-nowrap px-4 text-center"
+                    style={{ color: client.color }}
+                  >
+                    {client.name}
+                  </span>
                 </div>
               ))}
             </div>
