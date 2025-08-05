@@ -233,7 +233,7 @@ const About = () => {
           </div>
         </section>
       </div>
-    </div>
+    
   );
 };
 
