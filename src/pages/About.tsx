@@ -89,7 +89,7 @@ const About = () => {
         </section>
       </div>
 
-        {/* Our Valued Partners */}
+        {/* Our Valued Clients */}
         <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl mb-20 overflow-hidden">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Our Valued Partners</h2>
