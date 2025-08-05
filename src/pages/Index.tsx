@@ -61,8 +61,47 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+
+      <motion.nav
+        className="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-sm"
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <motion.img
+              src="/logo.png"
+              alt="Logo"
+              className="w-10 h-10"
+              initial={{ rotate: -180, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            />
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="leading-tight"
+            >
+              <div className="text-lg font-bold text-primary">Hagerstone</div>
+              <div className="text-sm text-muted-foreground">International Pvt. Ltd.</div>
+            </motion.div>
+          </div>
+          <div className="space-x-6 hidden md:flex">
+            <Link to="/" className="hover:underline text-primary">Home</Link>
+            <Link to="/projects" className="hover:underline text-primary">Projects</Link>
+            <Link to="/services" className="hover:underline text-primary">Services</Link>
+            <Link to="/contact" className="hover:underline text-primary">Contact</Link>
+          </div>
+        </div>
+      </motion.nav>
+
+
+
+
       {/* Hero Section with Video Background */}
-      <section className="relative text-white min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative text-white min-h-screen flex items-center justify-center overflow-hidden pt-24">
         {/* Video Background */}
         <video
           autoPlay
@@ -99,6 +138,8 @@ const Index = () => {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }
                 }}
+                className="text-white drop-shadow-md"
+                style={{ color: i % 2 === 0 ? '#d5b179' : '#fff' }}
               >
                 {char}
               </motion.span>
@@ -120,7 +161,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4 }}
           >
-            Transforming spaces into extraordinary experiences with 16+ years of design excellence
+            Transforming spaces into extraordinary experiences with 11+ years of design excellence.
           </motion.p>
 
           <motion.div
@@ -192,48 +233,45 @@ const Index = () => {
 
       
       {/* Services Preview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4 animate-fade-in">Our Expertise</h2>
-            <p className="text-xl text-muted-foreground animate-slide-up">
-              Comprehensive solutions for all your interior design needs
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card 
-                  key={service.title}
-                  className="group bg-gradient-card border-0 shadow-card hover:shadow-luxury transition-all duration-500 hover:scale-105 animate-scale-in text-center"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="h-8 w-8 text-gold-foreground" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-primary mb-4">{service.title}</h3>
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-          <div className="text-center mt-12">
-            <Button 
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 shadow-luxury hover:scale-105 transition-all duration-300"
+         <section className="py-20 px-6 md:px-16 text-center bg-background">
+        <motion.h2
+          className="text-3xl md:text-5xl font-bold text-white mb-6"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Our Expertise
+        </motion.h2>
+        <motion.p
+          className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Comprehensive solutions for all your interior design needs
+        </motion.p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="bg-muted rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
             >
-              <Link to="/services">
-                View All Services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
+              <service.icon className="w-12 h-12 text-yellow-400 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {service.title}
+              </h3>
+              <p className="text-white/80">{service.description}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
+  
 
       {/* Featured Projects */}
       <section className="py-20 bg-muted/30">
