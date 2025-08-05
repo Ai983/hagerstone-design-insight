@@ -161,7 +161,11 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4 }}
           >
+<<<<<<< HEAD
             Transforming spaces into extraordinary experiences with 11+ years of design excellence.
+=======
+            Transforming spaces into extraordinary experiences with 11+ years of design excellence
+>>>>>>> aa5837d (changes made in navbar)
           </motion.p>
 
           <motion.div
