@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import VideoBackground from "@/components/VideoBackground";
+import ValuedPartners from "@/components/ValuedPartners";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 
@@ -369,13 +370,16 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Valued Partners */}
+      <ValuedPartners />
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-primary mb-6 animate-fade-in">
+          <h2 className="text-4xl font-bold text-gold mb-6 animate-fade-in">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 animate-slide-up">
+          <p className="text-xl text-white/90 mb-8 animate-slide-up">
             Let's create something extraordinary together
           </p>
           <Button 

@@ -45,11 +45,11 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Hagerstone</h2>
-                <p className="text-xs text-primary-foreground/80">International Pvt. Ltd.</p>
+            <h2 className="text-2xl font-bold text-gold">Hagerstone</h2>
+            <p className="text-xs text-white/90">International Pvt. Ltd.</p>
               </div>
             </div>
-            <p className="text-primary-foreground/90 mb-6 max-w-md">
+            <p className="text-white/90 mb-6 max-w-md">
               Creating exceptional interior spaces that blend luxury with functionality. 
               Your vision, our expertise.
             </p>
@@ -64,8 +64,8 @@ const Footer = () => {
               >
                 <MapPin className="h-5 w-5 text-gold mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                 <div>
-                  <p className="font-medium">Visit Our Studio</p>
-                  <p className="text-sm text-primary-foreground/80 leading-relaxed">
+                  <p className="font-medium text-white">Visit Our Studio</p>
+                  <p className="text-sm text-white/80 leading-relaxed">
                     7th Floor, Max Hospital Building,<br />
                     H.B Twin Tower, New Delhi,<br />
                     Delhi 110034, India
@@ -79,8 +79,8 @@ const Footer = () => {
               >
                 <Phone className="h-5 w-5 text-gold group-hover:scale-110 transition-transform duration-300" />
                 <div>
-                  <p className="font-medium">Call Us</p>
-                  <p className="text-sm text-primary-foreground/80">+91 88829 79328</p>
+                  <p className="font-medium text-white">Call Us</p>
+                  <p className="text-sm text-white/80">+91 88829 79328</p>
                 </div>
               </a>
               
@@ -90,8 +90,8 @@ const Footer = () => {
               >
                 <Mail className="h-5 w-5 text-gold group-hover:scale-110 transition-transform duration-300" />
                 <div>
-                  <p className="font-medium">Email Us</p>
-                  <p className="text-sm text-primary-foreground/80">ea@hagerstone.com</p>
+                  <p className="font-medium text-white">Email Us</p>
+                  <p className="text-sm text-white/80">ea@hagerstone.com</p>
                 </div>
               </a>
             </div>
@@ -99,13 +99,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-gold">Quick Links</h3>
             <ul className="space-y-3">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-primary-foreground/80 hover:text-gold transition-colors duration-300"
+                    className="text-white/90 hover:text-gold transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Follow Us</h3>
+            <h3 className="text-lg font-bold mb-6 text-gold">Follow Us</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -126,7 +126,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center text-primary-foreground hover:bg-gold hover:text-gold-foreground transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-gold hover:text-gold-foreground transition-all duration-300 hover:scale-110"
                   >
                     <Icon className="h-5 w-5" />
                   </a>
@@ -137,8 +137,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
-          <p className="text-primary-foreground/60 text-sm">
+        <div className="border-t border-white/20 mt-12 pt-8 text-center">
+          <p className="text-white/60 text-sm">
             © {new Date().getFullYear()} Hagerstone International Pvt. Ltd. All rights reserved.
           </p>
         </div>

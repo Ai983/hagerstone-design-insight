@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import ValuedPartners from "@/components/ValuedPartners";
 import { 
   Phone, 
   Mail, 
@@ -113,10 +114,10 @@ const Contact = () => {
       <section className="relative bg-gradient-hero text-primary-foreground py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-gold">
             Contact Us
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-slide-up">
             Let's discuss your next interior design project
           </p>
         </div>
@@ -322,6 +323,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Valued Partners */}
+      <ValuedPartners />
     </div>
   );
 };

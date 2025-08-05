@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import ValuedPartners from "@/components/ValuedPartners";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 const Blog = () => {
@@ -79,10 +80,10 @@ const Blog = () => {
       <section className="relative bg-gradient-hero text-primary-foreground py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-gold">
             Design Insights
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-slide-up">
             Stay updated with the latest trends, tips, and insights from the world of interior design
           </p>
         </div>
@@ -216,13 +217,16 @@ const Blog = () => {
         </div>
       </section>
 
+      {/* Valued Partners */}
+      <ValuedPartners />
+
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-6 animate-fade-in text-gold">
             Stay Updated
           </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 animate-slide-up">
+          <p className="text-xl mb-8 text-white/90 animate-slide-up">
             Subscribe to our newsletter for the latest design insights and trends
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

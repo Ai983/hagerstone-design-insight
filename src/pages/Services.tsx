@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ServiceModal from "@/components/ServiceModal";
+import ValuedPartners from "@/components/ValuedPartners";
 import { 
   Palette, 
   Building, 
@@ -132,10 +133,10 @@ const Services = () => {
       <section className="relative bg-gradient-hero text-primary-foreground py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-gold">
             Our Services
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-slide-up">
             Comprehensive interior design and construction solutions for all your needs
           </p>
         </div>
@@ -278,13 +279,16 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Valued Partners */}
+      <ValuedPartners />
+
       {/* Call to Action */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-6 animate-fade-in text-gold">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 animate-slide-up">
+          <p className="text-xl mb-8 text-white/90 animate-slide-up">
             Get in touch with our experts for a consultation
           </p>
           <Button 

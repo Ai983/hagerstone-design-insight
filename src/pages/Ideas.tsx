@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ValuedPartners from "@/components/ValuedPartners";
 import { Heart, Share2, X, ArrowRight, ChevronDown } from "lucide-react";
 
 const Ideas = () => {
@@ -170,10 +171,10 @@ const Ideas = () => {
       <section className="relative bg-gradient-hero text-primary-foreground py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-gold">
             Design Ideas
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-slide-up">
             Discover inspiring interior design concepts for your next project
           </p>
         </div>
@@ -343,13 +344,16 @@ const Ideas = () => {
         </div>
       </section>
 
+      {/* Valued Partners */}
+      <ValuedPartners />
+
       {/* Inspiration Section */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-6 animate-fade-in text-gold">
             Inspired by What You See?
           </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 animate-slide-up">
+          <p className="text-xl mb-8 text-white/90 animate-slide-up">
             Let our expert designers bring your vision to life
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
