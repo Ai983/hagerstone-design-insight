@@ -377,7 +377,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-gold mb-6 animate-fade-in">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-xl text-white/90 mb-8 animate-slide-up">
+          <p className="text-xl text-primary mb-8 animate-slide-up">
             Let's create something extraordinary together
           </p>
           <Button 
