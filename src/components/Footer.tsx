@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-2 shadow-card">
                 <img 
-                  src="/lovable-uploads/75d01d4a-a1d5-4392-9fc3-598db7a50279.png" 
+                  src="public/logoo.png" 
                   alt="Hagerstone Logo" 
                   className="w-full h-full object-contain"
                 />

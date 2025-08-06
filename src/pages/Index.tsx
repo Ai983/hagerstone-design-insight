@@ -55,6 +55,24 @@ const Index = () => {
       company: "Fashion Retail Chain",
       content: "Outstanding work on our showroom design. The team understood our vision and delivered exactly what we wanted.",
       rating: 5
+    },
+    {
+    name: "Ananya Desai",
+    company: "Realty Corp",
+    content: "Reliable and creative. The entire process from design to execution was seamless.",
+    rating: 5
+    },
+    {
+    name: "Karan Bansal",
+    company: "RetailNest",
+    content: "Very collaborative and punctual. We loved the experience.",
+    rating: 5
+    },
+    {
+    name: "Vikram Mehta",
+    company: "InfraBuild India",
+    content: "Professional team and premium execution. We highly recommend Hagerstone.",
+    rating: 5
     }
   ];
 
@@ -316,30 +334,43 @@ const Index = () => {
               What our clients say about working with us
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card 
-                key={testimonial.name}
-                className="bg-gradient-card border-0 shadow-luxury animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-6 italic text-lg">
-                    "{testimonial.content}"
-                  </p>
-                  <div>
-                    <h4 className="font-bold text-primary">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          
+          <motion.div
+           className="overflow-hidden relative"
+           initial={{ x: 0 }}
+           animate={{ x: ["0%", "-50%"] }}
+           transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 30,
+            ease: "linear"
+            }}
+          >
+            <div className="flex gap-8 w-max">
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <Card 
+                 key={`${testimonial.name}-${index}`}
+                 className="min-w-[300px] max-w-[350px] bg-gradient-card border-0 shadow-luxury"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex mb-2">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-gold text-gold" />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground mb-4 italic text-base">
+                      "{testimonial.content}"
+                    </p>
+                    <div>
+                      <h4 className="font-bold text-primary">{testimonial.name}</h4>
+                      <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </motion.div>
+
         </div>
       </section>
 
