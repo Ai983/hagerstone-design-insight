@@ -204,7 +204,7 @@ const Index = () => {
       {/* Services Preview */}
          <section className="py-20 px-6 md:px-16 text-center bg-background">
         <motion.h2
-          className="text-3xl md:text-5xl font-bold text-white mb-6"
+          className="text-3xl md:text-5xl font-bold text-foreground/80 mb-6"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -213,7 +213,7 @@ const Index = () => {
           Our Expertise
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12"
+          className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
