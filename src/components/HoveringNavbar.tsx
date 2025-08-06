@@ -30,7 +30,7 @@ const HoveringNavbar = () => {
         {/* Logo & Branding */}
         <div className="flex items-center gap-4">
           <motion.img
-            src="public/logoo.png"
+            src="/logoo.png"
             alt="Logo"
             className="w-10 h-10"
             initial={{ rotate: -180, opacity: 0 }}
