@@ -223,7 +223,7 @@ const Index = () => {
         </motion.p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Link key={index} to="/services">
+            <Link key={index} to="src/pages/Services.tsx">
             <motion.div
               key={index}
               className="bg-muted rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
