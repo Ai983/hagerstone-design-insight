@@ -248,7 +248,7 @@ const Ideas = () => {
                 <Card 
                   key={idea.id}
                   className="group bg-gradient-card border-0 shadow-card hover:shadow-luxury transition-all duration-500 hover:scale-105 animate-scale-in overflow-hidden cursor-pointer"
-                  style={{ animationDelay: ⁠ ${index * 0.1}s ⁠ }}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => handleIdeaClick(idea)}
                 >
                   <div className="relative overflow-hidden">
