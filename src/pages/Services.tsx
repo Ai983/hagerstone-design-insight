@@ -239,7 +239,7 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gold text-black rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
+                  <div className="w-16 h-16 bg-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{step.title}</h3>
