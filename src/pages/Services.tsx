@@ -217,7 +217,7 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gold text-black rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
+                  <div className="w-16 h-16 bg-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
@@ -234,7 +234,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold text-foreground mb-6">Why Choose Hagerstone?</h2>
+              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose Hagerstone?</h2>
               <div className="space-y-6">
                 {[
                   {
