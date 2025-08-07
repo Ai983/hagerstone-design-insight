@@ -201,7 +201,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-[#1b1b1f] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4 animate-fade-in">Our Process</h2>
@@ -213,15 +213,15 @@ const Services = () => {
             {process.map((step, index) => (
               <Card 
                 key={step.step}
-                className="bg-gradient-card border-0 shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 animate-scale-in text-center"
+                className="bg-[#25252b] border border-white/10 shadow-md hover:shadow-lg transition-all duration-500 hover:scale-105 animate-scale-in text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-6 text-primary-foreground font-bold text-xl">
+                  <div className="w-16 h-16 bg-gold text-black rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-4">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-white/70">{step.description}</p>
                 </CardContent>
               </Card>
             ))}
