@@ -1,17 +1,24 @@
+// src/pages/services.tsx
+
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ServiceModal from "@/components/ServiceModal";
 
-import { 
-  Palette, 
-  Building, 
-  Zap, 
-  Sofa, 
-  Droplets, 
+import {
+  Palette,
+  Building,
+  Zap,
+  Sofa,
+  Droplets,
   Home,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 const Services = () => {
@@ -27,104 +34,116 @@ const Services = () => {
     {
       icon: Palette,
       title: "Interior Designing",
-      description: "Transform your space with innovative design solutions that blend aesthetics with functionality.",
+      description:
+        "Transform your space with innovative design solutions that blend aesthetics with functionality.",
       features: [
         "3D Visualization & Rendering",
         "Space Planning & Layout",
         "Color Consultation",
         "Material Selection",
-        "Lighting Design"
+        "Lighting Design",
       ],
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
     },
     {
       icon: Building,
       title: "Construction",
-      description: "Complete construction services with premium quality materials and expert craftsmanship.",
+      description:
+        "Complete construction services with premium quality materials and expert craftsmanship.",
       features: [
         "Turnkey Construction",
         "Project Management",
         "Quality Assurance",
         "Timeline Adherence",
-        "Budget Optimization"
+        "Budget Optimization",
       ],
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop",
     },
     {
       icon: Zap,
       title: "MEP Services",
-      description: "Mechanical, Electrical, and Plumbing solutions designed for efficiency and sustainability.",
+      description:
+        "Mechanical, Electrical, and Plumbing solutions designed for efficiency and sustainability.",
       features: [
         "HVAC Systems",
         "Electrical Installation",
         "Plumbing Systems",
         "Fire Safety Systems",
-        "Smart Home Integration"
+        "Smart Home Integration",
       ],
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop",
     },
     {
       icon: Sofa,
       title: "Furniture",
-      description: "Custom and curated furniture solutions that perfectly complement your interior design.",
+      description:
+        "Custom and curated furniture solutions that perfectly complement your interior design.",
       features: [
         "Custom Furniture Design",
         "Premium Material Selection",
         "Ergonomic Solutions",
         "Space-Optimized Designs",
-        "Installation & Setup"
+        "Installation & Setup",
       ],
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
     },
     {
       icon: Droplets,
       title: "Sanitary Items",
-      description: "High-quality sanitary fixtures and fittings from leading brands for modern bathrooms.",
+      description:
+        "High-quality sanitary fixtures and fittings from leading brands for modern bathrooms.",
       features: [
         "Premium Sanitaryware",
         "Modern Fixtures",
         "Water-Efficient Solutions",
         "Designer Accessories",
-        "Professional Installation"
+        "Professional Installation",
       ],
-      image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop",
     },
     {
       icon: Home,
       title: "All Interiors Work",
-      description: "Comprehensive interior solutions covering every aspect of your space transformation.",
+      description:
+        "Comprehensive interior solutions covering every aspect of your space transformation.",
       features: [
         "False Ceiling & Partitions",
         "Flooring Solutions",
         "Wall Treatments",
         "Window Treatments",
-        "Complete Fit-outs"
+        "Complete Fit-outs",
       ],
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
-    }
+      image:
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
+    },
   ];
 
   const process = [
     {
       step: "01",
       title: "Consultation",
-      description: "Understanding your vision, requirements, and budget"
+      description: "Understanding your vision, requirements, and budget",
     },
     {
       step: "02",
       title: "Design",
-      description: "Creating detailed plans and 3D visualizations"
+      description: "Creating detailed plans and 3D visualizations",
     },
     {
       step: "03",
       title: "Execution",
-      description: "Professional implementation with quality control"
+      description: "Professional implementation with quality control",
     },
     {
       step: "04",
       title: "Delivery",
-      description: "Final handover with complete satisfaction"
-    }
+      description: "Final handover with complete satisfaction",
+    },
   ];
 
   return (
@@ -149,7 +168,7 @@ const Services = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card 
+                <Card
                   key={service.title}
                   className="group bg-gradient-card border-0 shadow-luxury hover:shadow-hover transition-all duration-500 hover:scale-105 animate-scale-in overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -182,7 +201,7 @@ const Services = () => {
                             </li>
                           ))}
                         </ul>
-                        <Button 
+                        <Button
                           className="mt-6 group/btn"
                           variant="outline"
                           onClick={() => handleServiceClick(service)}
@@ -200,28 +219,28 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Our Process Section (Updated for Visibility) */}
       <section className="py-20 bg-[#1b1b1f] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4 animate-fade-in">Our Process</h2>
-            <p className="text-xl text-muted-white animate-slide-up">
+            <h2 className="text-4xl font-bold mb-4 animate-fade-in">Our Process</h2>
+            <p className="text-xl text-white/80 animate-slide-up">
               A streamlined approach to deliver exceptional results
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
-              <Card 
+              <Card
                 key={step.step}
                 className="bg-[#25252b] border border-white/10 shadow-md hover:shadow-lg transition-all duration-500 hover:scale-105 animate-scale-in text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
+                  <div className="w-16 h-16 bg-gold text-black rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-muted-white">{step.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-white/70">{step.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -229,60 +248,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose Hagerstone?</h2>
-              <div className="space-y-6">
-                {[
-                  {
-                    title: "11+ Years of Excellence",
-                    description: "Proven track record with over 500 satisfied clients"
-                  },
-                  {
-                    title: "End-to-End Solutions",
-                    description: "Complete design and build services under one roof"
-                  },
-                  {
-                    title: "Quality Assurance",
-                    description: "Premium materials and superior craftsmanship guaranteed"
-                  },
-                  {
-                    title: "Fortune 500 Clients",
-                    description: "Trusted by leading companies and global brands"
-                  }
-                ].map((benefit, index) => (
-                  <div 
-                    key={benefit.title} 
-                    className="flex items-start space-x-4 animate-slide-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary mb-1">{benefit.title}</h3>
-                      <p className="text-muted-foreground">{benefit.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="animate-scale-in">
-              <img
-                src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=600&h=400&fit=crop"
-                alt="Professional workspace"
-                className="rounded-2xl shadow-luxury w-full hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Valued Partners */}
-      
-
-      {/* Call to Action */}
+      {/* CTA */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6 animate-fade-in text-gold">
@@ -291,7 +257,7 @@ const Services = () => {
           <p className="text-xl mb-8 text-white/90 animate-slide-up">
             Get in touch with our experts for a consultation
           </p>
-          <Button 
+          <Button
             size="lg"
             variant="secondary"
             className="bg-gold text-gold-foreground hover:bg-gold/90 shadow-luxury hover:scale-105 transition-all duration-300 animate-scale-in"
