@@ -234,7 +234,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold text-primary mb-6">Why Choose Hagerstone?</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-6">Why Choose Hagerstone?</h2>
               <div className="space-y-6">
                 {[
                   {
