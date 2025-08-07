@@ -190,7 +190,10 @@ const Services = () => {
                           </div>
                           <CardTitle className="text-2xl text-primary">{service.title}</CardTitle>
                         </div>
-                        <p className="text-muted-foreground">{service.description}</p>
+                        <p className="text-muted-foreground dark:text-white/80">
+                        {service.description}
+                        </p>
+
                       </CardHeader>
                       <CardContent className="p-0">
                         <ul className="space-y-2">
