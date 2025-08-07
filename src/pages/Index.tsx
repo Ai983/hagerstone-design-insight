@@ -375,30 +375,30 @@ const Index = () => {
 
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
+      <section className="py-20 bg-[#1a1a1a] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 animate-fade-in">Why Choose Hagerstone?</h2>
-            <p className="text-xl text-primary-foreground/90 animate-slide-up">
-              Excellence in every project, innovation in every design
+            <p className="text-xl text-white/90 animate-slide-up">
+            Excellence in every project, innovation in every design
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               "11+ Years of Excellence",
-              "500+ Satisfied Clients", 
+              "500+ Satisfied Clients",
               "Fortune 500 Experience",
               "Turnkey Solutions"
             ].map((benefit, index) => (
-              <div 
-                key={benefit}
-                className="text-center animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CheckCircle className="h-12 w-12 text-gold mx-auto mb-4" />
-                <h3 className="text-lg font-semibold">{benefit}</h3>
-              </div>
-            ))}
+            <div
+            key={benefit}
+            className="text-center animate-scale-in"
+            style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CheckCircle className="h-12 w-12 text-gold mx-auto mb-4" />
+              <h3 className="text-lg font-semibold">{benefit}</h3>
+            </div>
+          ))}
           </div>
         </div>
       </section>
