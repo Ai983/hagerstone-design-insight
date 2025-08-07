@@ -385,7 +385,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              "16+ Years of Excellence",
+              "11+ Years of Excellence",
               "500+ Satisfied Clients", 
               "Fortune 500 Experience",
               "Turnkey Solutions"
