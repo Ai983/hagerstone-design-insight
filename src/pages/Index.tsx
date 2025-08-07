@@ -326,7 +326,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20">
+      <section className="py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4 animate-fade-in">Client Testimonials</h2>
@@ -334,29 +334,29 @@ const Index = () => {
               What our clients say about working with us
             </p>
           </div>
-          
-          <motion.div
-           className="overflow-hidden relative"
-           initial={{ x: 0 }}
-           animate={{ x: ["0%", "-50%"] }}
-           transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
-            ease: "linear"
+
+          <div className="relative w-full overflow-hidden">
+            <motion.div
+            className="flex gap-8 w-max"
+            initial={{ x: 0 }}
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 30,
+              ease: "linear"
             }}
-          >
-            <div className="flex gap-8 w-max">
+            >
               {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <Card 
-                 key={`${testimonial.name}-${index}`}
-                 className="min-w-[300px] max-w-[350px] bg-gradient-card border-0 shadow-luxury"
+                <Card
+                key={`${testimonial.name}-${index}`}
+                className="min-w-[300px] max-w-[350px] bg-gradient-card border-0 shadow-luxury"
                 >
                   <CardContent className="p-6">
                     <div className="flex mb-2">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-gold text-gold" />
-                      ))}
+                        ))}
                     </div>
                     <p className="text-muted-foreground mb-4 italic text-base">
                       "{testimonial.content}"
@@ -368,11 +368,11 @@ const Index = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </motion.div>
-
+            </motion.div>
+          </div>
         </div>
-      </section>
+       </section>
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">
