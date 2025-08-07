@@ -220,7 +220,7 @@ const Services = () => {
                   <div className="w-16 h-16 bg-gold text-black rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-xl">
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <h3 className="text-xl font-bold text-primary mb-4">{step.title}</h3>
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
               </Card>
