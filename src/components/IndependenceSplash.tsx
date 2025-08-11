@@ -7,13 +7,8 @@ export default function IndependenceSplash() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Date gate specifically for splash: Aug 12–18, 2025
     const now = new Date();
-    const start = new Date(`2025-08-12T00:00:00`);
-    const end = new Date(`2025-08-18T23:59:59`);
-
-    // Keep compatibility with existing theme flag while enforcing splash window precisely
-    if (!isFreedomWeek(now) || now < start || now > end) return;
+    if (!isFreedomWeek(now)) return;
 
     const today = new Date().toISOString().slice(0, 10);
     const last = (() => {
