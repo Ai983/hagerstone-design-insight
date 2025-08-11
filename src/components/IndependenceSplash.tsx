@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { isFreedomWeek } from "@/lib/independence";
 
-const KEY = "independence_splash_last_seen"; // store yyyy-mm-dd
+// daily splash gating disabled - always show during isFreedomWeek
 
 export default function IndependenceSplash() {
   const [show, setShow] = useState(false);
@@ -10,29 +10,18 @@ export default function IndependenceSplash() {
     const now = new Date();
     if (!isFreedomWeek(now)) return;
 
-    const today = new Date().toISOString().slice(0, 10);
-    const last = (() => {
-      try {
-        return localStorage.getItem(KEY);
-      } catch {
-        return null;
-      }
-    })();
-    if (last === today) return; // already shown today
+    // always show during Freedom Week (every refresh)
 
     // show splash
     setShow(true);
 
     // auto-dismiss after 3.2s (reduced motion gets shorter + no animation)
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const t = window.setTimeout(() => dismiss(today), prefersReduced ? 1800 : 3200);
+    const t = window.setTimeout(() => dismiss(), prefersReduced ? 1800 : 3200);
     return () => window.clearTimeout(t);
   }, []);
 
-  const dismiss = (stamp?: string) => {
-    try {
-      localStorage.setItem(KEY, stamp ?? new Date().toISOString().slice(0, 10));
-    } catch {}
+  const dismiss = () => {
     setShow(false);
   };
 
@@ -46,7 +35,7 @@ export default function IndependenceSplash() {
       className="fixed inset-0 z-[9999] flex items-center justify-center"
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0" style={{ backgroundColor: "hsl(var(--flag-white))" }} />
 
       {/* Card */}
       <div className="relative mx-6 w-full max-w-[680px] overflow-hidden rounded-2xl border border-white/15 bg-white/85 p-6 text-center shadow-2xl dark:border-white/10 dark:bg-background/90">
