@@ -144,7 +144,15 @@ const Index = () => {
                   visible: { opacity: 1, y: 0 }
                 }}
                 className="text-white drop-shadow-md"
-                style={{ color: i % 2 === 0 ? '#d5b179' : '#fff' }}
+                style={isFreedomWeek() ? {
+                  background: 'linear-gradient(to bottom, #FF9933 0%, #FFFFFF 50%, #138808 100%)',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  color: '#fff' // fallback for unsupported browsers
+                } : { 
+                  color: i % 2 === 0 ? '#d5b179' : '#fff' 
+                }}
               >
                 {char}
               </motion.span>
