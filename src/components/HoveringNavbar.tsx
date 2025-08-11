@@ -2,6 +2,8 @@ import { motion, useAnimation } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { isFreedomWeek } from "@/lib/independence";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const HoveringNavbar = () => {
   const location = useLocation();
@@ -17,6 +19,8 @@ const HoveringNavbar = () => {
       transition: { duration: 0.6, ease: "easeOut" },
     });
   }, [location.pathname, controls]);
+
+  const showBadge = isFreedomWeek();
 
   return (
     <motion.nav
@@ -57,6 +61,29 @@ const HoveringNavbar = () => {
           <Link to="/ideas" className="hover:underline text-foreground">Ideas</Link>
           <Link to="/blog" className="hover:underline text-foreground">Blog</Link>
           <Link to="/contact" className="hover:underline text-foreground">Contact Us</Link>
+
+          {/* Freedom Week badge - preserves space to avoid layout shift */}
+          <div className="min-w-[160px] flex items-center justify-end">
+            {showBadge ? (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div
+                    className="inline-flex h-8 items-center gap-2 rounded-full border border-border px-3 text-xs text-foreground bg-white/60 dark:bg-black/40 backdrop-blur supports-[backdrop-filter]:backdrop-blur-md"
+                    role="status"
+                    aria-label="Independence Day"
+                  >
+                    <span className="text-base" aria-hidden>🇮🇳</span>
+                    <span className="max-[375px]:hidden">Independence Day</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  79th Independence Day • 15 Aug 2025
+                </TooltipContent>
+              </Tooltip>
+            ) : (
+              <span aria-hidden className="inline-block h-8" />
+            )}
+          </div>
 
           <ThemeToggle />
         </div>

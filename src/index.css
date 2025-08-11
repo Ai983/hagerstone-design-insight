@@ -42,6 +42,11 @@ All colors MUST be HSL.
     --luxury-foreground: 0 0% 96%;
     --gold: 38 65% 60%; /* Warm gold */
     --gold-foreground: 220 15% 18%;
+
+    /* Independence Week tokens */
+    --saffron: 30 100% 60%;
+    --india-green: 120 90% 28%;
+    --chakra: 217 87% 30%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 15% 18%), hsl(220 20% 25%));
@@ -100,6 +105,11 @@ All colors MUST be HSL.
     --luxury-foreground: 220 15% 8%;
     --gold: 38 65% 60%; /* Warm gold stays same */
     --gold-foreground: 220 15% 8%;
+
+    /* Independence Week tokens */
+    --saffron: 30 100% 60%;
+    --india-green: 120 90% 28%;
+    --chakra: 217 87% 30%;
     
     /* Dark theme gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%), hsl(220 15% 12%));

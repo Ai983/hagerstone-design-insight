@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import VideoBackground from "@/components/VideoBackground";
+import { isFreedomWeek } from "@/lib/independence";
 
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
@@ -99,6 +100,23 @@ const Index = () => {
         >
           <source src="/OfficeInterior.mp4" type="video/mp4" />
         </video>
+
+        {/* Freedom Week overlay under dark veil */}
+        {/* eslint-disable-next-line react/no-unknown-property */}
+        {/* Conditional soft tri-color blend + chakra watermark */}
+        {require("@/lib/independence").isFreedomWeek() && (
+          <div className="absolute inset-0 z-[5] mix-blend-soft-light pointer-events-none">
+            <div className="absolute inset-0 bg-[conic-gradient(at_0%_0%,theme(colors.saffron)_0_33%,#FFFFFF_33%_66%,theme(colors.indiaGreen)_66%_100%)] opacity-[0.18] dark:opacity-[0.10]" />
+            <div
+              className="absolute inset-0 bg-center bg-no-repeat opacity-[0.06]"
+              style={{
+                backgroundImage:
+                  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><circle cx='50' cy='50' r='48' stroke='%230A3D91' stroke-width='4'/></svg>\")",
+                backgroundSize: "240px 240px",
+              }}
+            />
+          </div>
+        )}
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>

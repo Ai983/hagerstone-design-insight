@@ -60,6 +60,9 @@ export default {
 					DEFAULT: 'hsl(var(--gold))',
 					foreground: 'hsl(var(--gold-foreground))'
 				},
+				saffron: 'hsl(var(--saffron))',
+				indiaGreen: 'hsl(var(--india-green))',
+				chakra: 'hsl(var(--chakra))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
