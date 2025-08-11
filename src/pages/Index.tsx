@@ -143,13 +143,12 @@ const Index = () => {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }
                 }}
-                className="text-white drop-shadow-md"
+                className={isFreedomWeek() ? "text-white drop-shadow-md" : "text-white drop-shadow-md"}
                 style={isFreedomWeek() ? {
                   background: 'linear-gradient(to bottom, #FF9933 0%, #FFFFFF 50%, #138808 100%)',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  color: '#fff' // fallback for unsupported browsers
+                  WebkitTextFillColor: 'transparent'
                 } : { 
                   color: i % 2 === 0 ? '#d5b179' : '#fff' 
                 }}
