@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { isFreedomWeek } from '@/lib/independence';
 
 const IndependenceSplash: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,14 +9,8 @@ const IndependenceSplash: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Check if we're in Independence Week (Aug 12-18, 2025) in IST
-    const now = new Date();
-    const istTime = new Date(now.toLocaleString("en-US", {timeZone: "Asia/Kolkata"}));
-    const year = 2025;
-    const startDate = new Date(`${year}-08-12T00:00:00+05:30`);
-    const endDate = new Date(`${year}-08-18T23:59:59+05:30`);
-    
-    if (istTime < startDate || istTime > endDate) {
+    // Check if we're in Independence Week using existing function
+    if (!isFreedomWeek()) {
       return; // Don't show splash outside Independence Week
     }
 
