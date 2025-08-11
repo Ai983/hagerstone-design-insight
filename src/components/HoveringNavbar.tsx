@@ -28,9 +28,10 @@ const HoveringNavbar = () => {
       animate={controls}
       className={`${
         isHome ? "fixed" : "sticky"
-      } top-0 w-full z-50 bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-sm`}
+      } top-0 w-full z-50 relative overflow-hidden bg-white/60 dark:bg-black/40 backdrop-blur-md shadow-sm`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      {showBadge && <div aria-hidden className="flag-wave" />}
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative z-10">
         {/* Logo & Branding */}
         <div className="flex items-center gap-4">
           <motion.img
@@ -73,7 +74,7 @@ const HoveringNavbar = () => {
                     aria-label="Independence Day"
                   >
                     <span className="text-base" aria-hidden>🇮🇳</span>
-                    <span className="max-[375px]:hidden">Independence Day</span>
+                    <span className="max-[375px]:hidden">79th Independence Day</span>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>

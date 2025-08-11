@@ -47,6 +47,7 @@ All colors MUST be HSL.
     --saffron: 30 100% 60%;
     --india-green: 120 90% 28%;
     --chakra: 217 87% 30%;
+    --flag-white: 0 0% 100%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 15% 18%), hsl(220 20% 25%));
@@ -110,6 +111,7 @@ All colors MUST be HSL.
     --saffron: 30 100% 60%;
     --india-green: 120 90% 28%;
     --chakra: 217 87% 30%;
+    --flag-white: 0 0% 100%;
     
     /* Dark theme gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%), hsl(220 15% 12%));
@@ -176,5 +178,39 @@ All colors MUST be HSL.
   /* Interactive elements should show pointer cursor for accessibility */
   button, a, [role="button"], input, textarea, select {
     cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .flag-wave {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .35;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none"><rect width="120" height="40" fill="black"/><path fill="white" d="M0 12 C 15 4, 30 20, 45 12 S 75 20, 90 12 S 105 4, 120 12 V28 C 105 36, 90 20, 75 28 S 45 20, 30 28 S 15 36, 0 28 Z"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none"><rect width="120" height="40" fill="black"/><path fill="white" d="M0 12 C 15 4, 30 20, 45 12 S 75 20, 90 12 S 105 4, 120 12 V28 C 105 36, 90 20, 75 28 S 45 20, 30 28 S 15 36, 0 28 Z"/></svg>');
+    -webkit-mask-size: 600px 100%;
+    mask-size: 600px 100%;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+  }
+  .flag-wave::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(180deg,
+      hsl(var(--saffron)) 0 33%,
+      hsl(var(--flag-white)) 33% 66%,
+      hsl(var(--india-green)) 66% 100%
+    );
+    animation: flag-pan 16s linear infinite;
+    filter: saturate(1.1);
+  }
+  @keyframes flag-pan {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
   }
 }
