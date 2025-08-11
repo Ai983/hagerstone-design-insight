@@ -16,29 +16,29 @@ const IndependenceSplash: React.FC = () => {
 
     setIsVisible(true);
 
-    // Timeline sequence
-    const timeline = setTimeout(() => {
-      // At ~3.5s: cross-fade from video to text
+    // Show text after video starts (1 second delay)
+    const textTimer = setTimeout(() => {
       setShowText(true);
+    }, 1000);
+
+    // Start exit animation after 6 seconds total
+    const exitTimer = setTimeout(() => {
+      setIsExiting(true);
       
-      // At ~6s: start exit animation
-      const exitTimer = setTimeout(() => {
-        setIsExiting(true);
-        
-        // At ~7s: remove from DOM
-        const removeTimer = setTimeout(() => {
-          if (overlayRef.current) {
-            overlayRef.current.remove();
-          }
-        }, 1000);
+      // Remove from DOM after fade out
+      const removeTimer = setTimeout(() => {
+        if (overlayRef.current) {
+          overlayRef.current.remove();
+        }
+      }, 1000);
 
-        return () => clearTimeout(removeTimer);
-      }, 2500); // 2.5s after text shows (6s total)
+      return () => clearTimeout(removeTimer);
+    }, 6000);
 
-      return () => clearTimeout(exitTimer);
-    }, 3500); // 3.5s for video
-
-    return () => clearTimeout(timeline);
+    return () => {
+      clearTimeout(textTimer);
+      clearTimeout(exitTimer);
+    };
   }, []);
 
   const handleVideoError = () => {
@@ -66,32 +66,34 @@ const IndependenceSplash: React.FC = () => {
       style={{ backgroundColor: '#0B1F3B' }}
       aria-hidden="true"
     >
-      {/* Flag Video */}
+      {/* Flag Video Background */}
       <video
         id="flagVideo"
         ref={videoRef}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-          showText ? 'opacity-0' : 'opacity-100'
-        }`}
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
         playsInline
         preload="auto"
+        loop
         onError={handleVideoError}
       >
         <source src="/indianflag waving.mp4" type="video/mp4" />
       </video>
 
+      {/* Semi-transparent overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
       {/* Text Container */}
       <div
         id="splashText"
-        className={`relative z-10 text-center px-6 max-w-4xl transition-all duration-600 ease-in-out ${
+        className={`relative z-10 text-center px-6 max-w-4xl transition-all duration-800 ease-in-out ${
           showText 
             ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-2'
+            : 'opacity-0 translate-y-4'
         }`}
         style={{
-          textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'
+          textShadow: '0 4px 8px rgba(0, 0, 0, 0.8)'
         }}
       >
         {/* Quote */}
