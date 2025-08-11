@@ -104,7 +104,7 @@ const Index = () => {
         {/* Freedom Week overlay under dark veil */}
         {/* eslint-disable-next-line react/no-unknown-property */}
         {/* Conditional soft tri-color blend + chakra watermark */}
-        {require("@/lib/independence").isFreedomWeek() && (
+        {isFreedomWeek() && (
           <div className="absolute inset-0 z-[5] mix-blend-soft-light pointer-events-none">
             <div className="absolute inset-0 bg-[conic-gradient(at_0%_0%,theme(colors.saffron)_0_33%,#FFFFFF_33%_66%,theme(colors.indiaGreen)_66%_100%)] opacity-[0.18] dark:opacity-[0.10]" />
             <div
