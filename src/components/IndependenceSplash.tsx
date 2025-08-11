@@ -78,7 +78,7 @@ const IndependenceSplash: React.FC = () => {
         loop
         onError={handleVideoError}
       >
-        <source src="public/indianflagwaving.mp4" type="video/mp4" />
+        <source src="/indianflagwaving.mp4" type="video/mp4" />
       </video>
 
       {/* Semi-transparent overlay for better text readability */}
