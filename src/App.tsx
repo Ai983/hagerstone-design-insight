@@ -15,6 +15,7 @@ import Ideas from "./pages/Ideas";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import IndependenceSplash from "./components/IndependenceSplash";
 
  
 const queryClient = new QueryClient();
@@ -25,8 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        
-        
+        <IndependenceSplash />
         <CustomCursor />
         <HoveringNavbar />
         <Routes>
