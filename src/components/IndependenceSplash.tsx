@@ -16,16 +16,16 @@ const IndependenceSplash: React.FC = () => {
 
     setIsVisible(true);
 
-    // Show text after video starts (1 second delay)
+    // Show text after flag waves for 2 seconds
     const textTimer = setTimeout(() => {
       setShowText(true);
-    }, 1000);
+    }, 2000);
 
-    // Start exit animation after 6 seconds total
+    // Start exit animation after 4.5 seconds total (2s flag + 2.5s with text)
     const exitTimer = setTimeout(() => {
       setIsExiting(true);
       
-      // Remove from DOM after fade out
+      // Remove from DOM after fade out (1s fade)
       const removeTimer = setTimeout(() => {
         if (overlayRef.current) {
           overlayRef.current.remove();
@@ -33,7 +33,7 @@ const IndependenceSplash: React.FC = () => {
       }, 1000);
 
       return () => clearTimeout(removeTimer);
-    }, 6000);
+    }, 4500);
 
     return () => {
       clearTimeout(textTimer);
@@ -42,7 +42,7 @@ const IndependenceSplash: React.FC = () => {
   }, []);
 
   const handleVideoError = () => {
-    // If video fails, skip to text immediately
+    // If video fails, skip to text immediately and exit faster
     setShowText(true);
     setTimeout(() => {
       setIsExiting(true);
@@ -51,7 +51,7 @@ const IndependenceSplash: React.FC = () => {
           overlayRef.current.remove();
         }
       }, 1000);
-    }, 2000);
+    }, 1500);
   };
 
   if (!isVisible) return null;
