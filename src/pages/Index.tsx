@@ -254,21 +254,21 @@ const Index = () => {
             <div className="flex animate-[slide_20s_linear_infinite] space-x-8 items-center">
               {[
                 { name: "Monin", logo: "/Monin.jpeg" },
-                { name: "APL Logistics", logo: "/Apl-logo, HD Png Download , Transparent Png Image - PNGitem.jpeg" },
-                { name: "Singapore Airlines", logo: "/Singapore Airlines Logo - PNG Logo Vector Brand Downloads (SVG, EPS).jpeg" },
-                { name: "AECOM", logo: "/AECOM-Logo.wine.jpeg" },
+                { name: "APL Logistics", logo: "/Apl.jpeg" },
+                { name: "Singapore Airlines", logo: "/SingaporeAirlines.jpeg" },
+                { name: "AECOM", logo: "/AECOM.jpeg" },
                 { name: "TAJ", logo: "/Taj.jpeg" },
                 { name: "UltraTech Cement", logo: "/Ultratech.jpeg" },
-                { name: "Air India", logo: "/air india.jpeg" },
+                { name: "Air India", logo: "/airindia.jpeg" },
                 { name: "Lufthansa", logo: "/lufthansa.jpeg" },
                 // Duplicate for continuous scroll
                 { name: "Monin", logo: "/Monin.jpeg" },
-                { name: "APL Logistics", logo: "/Apl-logo, HD Png Download , Transparent Png Image - PNGitem.jpeg" },
-                { name: "Singapore Airlines", logo: "/Singapore Airlines Logo - PNG Logo Vector Brand Downloads (SVG, EPS).jpeg" },
-                { name: "AECOM", logo: "/AECOM-Logo.wine.jpeg" },
+                { name: "APL Logistics", logo: "/Apl.jpeg" },
+                { name: "Singapore Airlines", logo: "/SingaporeAirlines.jpeg" },
+                { name: "AECOM", logo: "/AECOM.jpeg" },
                 { name: "TAJ", logo: "/Taj.jpeg" },
                 { name: "UltraTech Cement", logo: "/Ultratech.jpeg" },
-                { name: "Air India", logo: "/air india.jpeg" },
+                { name: "Air India", logo: "/airindia.jpeg" },
                 { name: "Lufthansa", logo: "/lufthansa.jpeg" }
               ].map((client, index) => (
                 <div 
