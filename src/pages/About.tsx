@@ -90,7 +90,8 @@ const About = () => {
       </div>
 
         {/* Our Valued Clients */}
-        <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl mb-20 overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl mb-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Our Valued Clients</h2>
             <p className="text-lg text-foreground/80">Trusted by industry leaders worldwide</p>
@@ -98,37 +99,39 @@ const About = () => {
           <div className="relative overflow-hidden">
             <div className="flex animate-[slide_20s_linear_infinite] space-x-8 items-center">
               {[
-                { name: "Monin", color: "#8B4513", bgColor: "rgba(139, 69, 19, 0.1)" },
-                { name: "APL Logistics", color: "#1E40AF", bgColor: "rgba(30, 64, 175, 0.1)" },
-                { name: "Singapore Airlines", color: "#003087", bgColor: "rgba(0, 48, 135, 0.1)" },
-                { name: "AECOM", color: "#00A651", bgColor: "rgba(0, 166, 81, 0.1)" },
-                { name: "TAJ", color: "#FFD700", bgColor: "rgba(255, 215, 0, 0.1)" },
-                { name: "UltraTech Cement", color: "#FFA500", bgColor: "rgba(255, 165, 0, 0.1)" },
-                { name: "Air India", color: "#DC2626", bgColor: "rgba(220, 38, 38, 0.1)" },
-                { name: "Lufthansa", color: "#1E3A8A", bgColor: "rgba(30, 58, 138, 0.1)" },
-                { name: "Statkraft", color: "#059669", bgColor: "rgba(5, 150, 105, 0.1)" },
+                { name: "Monin", logo: "/Monin.jpeg" },
+                { name: "APL Logistics", logo: "/Apl.jpeg" },
+                { name: "Singapore Airlines", logo: "/SingaporeAirlines.jpeg" },
+                { name: "AECOM", logo: "/AECOM.png" },
+                { name: "TAJ", logo: "/Taj.jpeg" },
+                { name: "UltraTech Cement", logo: "/Ultratech.jpeg" },
+                { name: "Air India", logo: "/airindia.jpeg" },
+                { name: "Lufthansa", logo: "/lufthansa.jpeg" },
                 // Duplicate for continuous scroll
-                { name: "Monin", color: "#8B4513", bgColor: "rgba(139, 69, 19, 0.1)" },
-                { name: "APL Logistics", color: "#1E40AF", bgColor: "rgba(30, 64, 175, 0.1)" },
-                { name: "Singapore Airlines", color: "#003087", bgColor: "rgba(0, 48, 135, 0.1)" },
-                { name: "AECOM", color: "#00A651", bgColor: "rgba(0, 166, 81, 0.1)" }
+                { name: "Monin", logo: "/Monin.jpeg" },
+                { name: "APL Logistics", logo: "/Apl.jpeg" },
+                { name: "Singapore Airlines", logo: "/SingaporeAirlines.jpeg" },
+                { name: "AECOM", logo: "/AECOM.png" },
+                { name: "TAJ", logo: "/Taj.jpeg" },
+                { name: "UltraTech Cement", logo: "/Ultratech.jpeg" },
+                { name: "Air India", logo: "/airindia.jpeg" },
+                { name: "Lufthansa", logo: "/lufthansa.jpeg" }
               ].map((client, index) => (
                 <div 
                   key={index} 
-                  className="flex-shrink-0 w-48 h-24 bg-white/90 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 flex items-center justify-center hover:scale-105"
-                  style={{ backgroundColor: client.bgColor }}
+                  className="flex-shrink-0 w-48 h-24 bg-white/90 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 flex items-center justify-center hover:scale-105 p-4"
                 >
-                  <span 
-                    className="text-lg font-bold whitespace-nowrap px-4 text-center"
-                    style={{ color: client.color }}
-                  >
-                    {client.name}
-                  </span>
+                  <img 
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Leadership */}
         <section className="py-20">
