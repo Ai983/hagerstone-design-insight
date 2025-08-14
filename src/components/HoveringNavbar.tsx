@@ -61,6 +61,7 @@ const HoveringNavbar = () => {
           <Link to="/services" className="hover:underline text-foreground">Our Services</Link>
           <Link to="/ideas" className="hover:underline text-foreground">Ideas</Link>
           <Link to="/blog" className="hover:underline text-foreground">Blog</Link>
+          <Link to="/find-your-style" className="hover:underline text-foreground">Find Your Style</Link>
           <Link to="/contact" className="hover:underline text-foreground">Contact Us</Link>
 
           {/* Freedom Week badge - preserves space to avoid layout shift */}

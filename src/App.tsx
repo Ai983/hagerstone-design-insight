@@ -14,6 +14,7 @@ import Services from "./pages/Services";
 import Ideas from "./pages/Ideas";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import FindYourStyle from "./pages/FindYourStyle";
 import NotFound from "./pages/NotFound";
 import IndependenceSplash from "./components/IndependenceSplash";
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/ideas" element={<Ideas />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/find-your-style" element={<FindYourStyle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
