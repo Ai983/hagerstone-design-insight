@@ -92,21 +92,6 @@ const Services = () => {
         "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
     },
     {
-      icon: Droplets,
-      title: "Sanitary Items",
-      description:
-        "High-quality sanitary fixtures and fittings from leading brands for modern bathrooms.",
-      features: [
-        "Premium Sanitaryware",
-        "Modern Fixtures",
-        "Water-Efficient Solutions",
-        "Designer Accessories",
-        "Professional Installation",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop",
-    },
-    {
       icon: Home,
       title: "All Interiors Work",
       description:
