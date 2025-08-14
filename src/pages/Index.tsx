@@ -173,7 +173,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4 }}
           >
-            Transforming spaces into extraordinary experiences with 11+ years of design excellence.
+            Designing & Building Tomorrow's Workspaces.
           </motion.p>
 
           <motion.div
